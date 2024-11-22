@@ -39,7 +39,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     await asyncio.sleep(1.5)
     await update.message.reply_text(
-        "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀         ⠀   С чем тебе помочь?",
+        "С чем тебе помочь?",
         reply_markup=reply_markup,
     )
 
