@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Копируем файлы бота в контейнер
-COPY . .
+COPY .. .
 
 # Устанавливаем зависимости
 RUN pip install -r requirements.txt
