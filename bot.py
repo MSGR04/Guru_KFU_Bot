@@ -5,7 +5,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, BotComm
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackQueryHandler, ContextTypes
 
 TOKEN = '7608926069:AAHqWOz0V9dSlqqAyKNA02Y162C6ZgL5hfc'
-ADMIN_SERVER_URL = 'gurukfuadmin-production.up.railway.app'
+ADMIN_SERVER_URL = 'https://gurukfuadminbot-production.up.railway.app/new_request'
 user_data_storage = {}
 ADMIN_ID = 866765016
 
