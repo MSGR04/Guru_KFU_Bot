@@ -2,11 +2,14 @@ import asyncio
 import requests
 import os
 
+from dotenv import load_dotenv
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, BotCommand
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackQueryHandler, ContextTypes
 
-TOKEN = '7608926069:AAHqWOz0V9dSlqqAyKNA02Y162C6ZgL5hfc'
-ADMIN_SERVER_URL = 'http://localhost:5001/new_request'
+load_dotenv()
+TOKEN = os.getenv('BOT_TOKEN')
+ADMIN_SERVER_URL = os.getenv('ADMIN_SERVER_URL')
+
 user_data_storage = {}
 ADMIN_ID = 866765016
 
