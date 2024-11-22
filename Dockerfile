@@ -1,14 +1,12 @@
-# Используем официальный образ Python
 FROM python:3.9-slim
 
-# Устанавливаем рабочую директорию внутри контейнера
+# Установка зависимостей
 WORKDIR /app
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Копируем файлы бота в контейнер
-COPY .. .
+# Копируем код бота
+COPY . .
 
-# Устанавливаем зависимости
-RUN pip install -r requirements.txt
-
-# Команда для запуска бота
+# Указываем команду запуска бота
 CMD ["python", "bot.py"]
