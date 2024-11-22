@@ -4,8 +4,8 @@ import requests
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, BotCommand
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackQueryHandler, ContextTypes
 
-TOKEN = '7608926069:AAFsTr_Mla5vzY4MpZcFWfpw3P4UkhTZae8'
-ADMIN_SERVER_URL = 'http://localhost:5001/new_request'
+TOKEN = '7608926069:AAHqWOz0V9dSlqqAyKNA02Y162C6ZgL5hfc'
+ADMIN_SERVER_URL = 'gurukfuadmin-production.up.railway.app'
 user_data_storage = {}
 ADMIN_ID = 866765016
 
