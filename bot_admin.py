@@ -6,6 +6,7 @@ from io import BytesIO
 import threading
 
 app = Flask(__name__)
+
 # Настройки бота-администратора
 ADMIN_BOT_TOKEN = '7798675687:AAHKJ1FnY2t1J7xtmVnAipfa1xeMB4ylUqc'
 ADMIN_CHAT_ID =  866765016 # Ваш Telegram ID или ID чата, куда будут приходить уведомления
