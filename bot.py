@@ -154,12 +154,18 @@ async def save_user_input(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 photo_url = file.file_path
 
             # Отправляем запрос на сервер, включая URL фотографии
-            requests.post(ADMIN_SERVER_URL, json={
-                'user_id': user_id,
-                'request_type': request_type,
-                'details': user_text,
-                'photo_url': photo_url  # Передаем URL фотографии
-            })
+
+            try:
+                response = requests.post(ADMIN_SERVER_URL + "/new_request", json={
+                    'user_id': user_id,
+                    'request_type': request_type,
+                    'details': user_text,
+                    'photo_url': photo_url
+                })
+                response.raise_for_status()
+            except requests.RequestException as e:
+                print(f"Ошибка при отправке запроса: {e}")
+
             await update.message.reply_text(
                 "Спасибо за Ваше доверие, мы приняли Ваш запрос! По всем дополнительным вопросам с Вами свяжется специалист в течение суток, ожидайте.")
             del user_data_storage[user_id]
